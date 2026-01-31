@@ -1,57 +1,93 @@
 // Data
-const techStack = [
-    { name: 'Aquese', desc: 'AI-Automated Security Compliance Platform', icon: '🤖', tags: ['AI/ML', 'Compliance', 'Automation'] },
-    { name: 'ZScaler', desc: 'Zero Trust Network Access', icon: '🌐', tags: ['ZTNA', 'Cloud Security', 'SWG'] },
-    { name: 'CrowdStrike', desc: 'Endpoint Detection & Response', icon: '🦅', tags: ['EDR', 'Threat Intel', 'XDR'] },
-    { name: 'Fusion NG-SIEM', desc: 'Next-Gen SIEM', icon: '🔍', tags: ['SIEM', 'Log Analysis', 'Correlation'] },
-    { name: 'Rapid7', desc: 'Vulnerability Management', icon: '🎯', tags: ['VM', 'Pen Testing', 'InsightVM'] },
-    { name: 'Terraform', desc: 'Infrastructure as Code', icon: '🏗️', tags: ['IaC', 'Multi-Cloud', 'Automation'] },
-    { name: 'Docker', desc: 'Container Platform', icon: '🐋', tags: ['Containers', 'Microservices', 'DevOps'] },
-    { name: 'Kubernetes', desc: 'Container Orchestration', icon: '☸️', tags: ['K8s', 'Orchestration', 'Scaling'] }
+const expertise = [
+    { 
+        name: 'SOC2 Compliance', 
+        desc: 'Type II audit coordination, evidence collection, control validation', 
+        letter: 'S2', 
+        tags: ['Audit', 'Controls', 'Evidence'] 
+    },
+    { 
+        name: 'NIST CSF', 
+        desc: 'Risk assessment and framework implementation', 
+        letter: 'NF', 
+        tags: ['Framework', 'Risk', 'Assessment'] 
+    },
+    { 
+        name: 'Identity & Access', 
+        desc: 'IAM workflows, SAML/SCIM, least privilege enforcement', 
+        letter: 'IA', 
+        tags: ['IAM', 'Okta', 'SSO'] 
+    },
+    { 
+        name: 'Security Monitoring', 
+        desc: 'SIEM analysis, alert triage, incident response', 
+        letter: 'SM', 
+        tags: ['SIEM', 'Detection', 'Response'] 
+    },
+    { 
+        name: 'Threat Intelligence', 
+        desc: 'EDR/XDR platforms, threat hunting, vulnerability management', 
+        letter: 'TI', 
+        tags: ['EDR', 'Hunting', 'Intel'] 
+    },
+    { 
+        name: 'Risk Management', 
+        desc: 'Third-party risk, infrastructure audits, gap analysis', 
+        letter: 'RM', 
+        tags: ['TPRM', 'Audit', 'Risk'] 
+    },
+    { 
+        name: 'Cloud Security', 
+        desc: 'AWS/Azure infrastructure security and IaC deployment', 
+        letter: 'CS', 
+        tags: ['AWS', 'Azure', 'IaC'] 
+    },
+    { 
+        name: 'Network Security', 
+        desc: 'Zero trust architecture, VPN, firewall management', 
+        letter: 'NS', 
+        tags: ['ZT NA', 'Firewall', 'VPN'] 
+    },
+    { 
+        name: 'Vulnerability Management', 
+        desc: 'Scanning, prioritization, patch management, remediation tracking', 
+        letter: 'VM', 
+        tags: ['Scanning', 'Patching', 'Remediation'] 
+    }
 ];
 
 const experience = [
     {
         title: 'System Administrator - AI & Security',
         company: 'Fuel Cycle',
-        period: '2025 - Present',
+        period: 'July 2024 - Present',
         points: [
-            'Lead, investigate, and triage security operations and alerts through Rapid7, CrowdStrike, and ZScaler',
-            'Configure SAML/SCIM for applications and maintain workflows in Okta',
-            'Audit infrastructure for security improvements and implement solutions',
-            'Lead AI research, deployment, and AI security such as connectors, MCP, RAG',
-            'Maintain and perform migrations/upgrades to cloud infrastructure',
-            'Integrate and build out AWS and Azure infrastructure for IT projects and data connectors for SecOps'
+            'Lead SOC2 Type II audit as primary technical liaison, coordinating evidence collection across 100+ controls and interfacing with external auditors for compliance certification',
+            'Assess and triage 30+ daily security events using Rapid7, CrowdStrike, and ZScaler, performing risk-based analysis to determine business impact and remediation urgency',
+            'Conduct infrastructure risk assessments aligned with NIST Cybersecurity Framework, identifying security gaps and recommending controls to reduce organizational risk exposure',
+            'Configure identity and access management workflows in Okta including SAML/SCIM authentication, enforcing least privilege and segregation of duties principles',
+            'Build AWS and Azure infrastructure for security operations data connectors and IT project automation'
         ]
     },
     {
-        title: 'Systems Administrator',
+        title: 'System Administrator',
         company: 'Advanced Networks',
-        period: '2024 - 2025',
+        period: 'July 2023 - July 2024',
         points: [
-            'Manage servers, infrastructure, and networks for diverse enterprise clients',
-            'Create operational and technical procedures for daily IT tasks',
-            'Develop infrastructure reports and monitor for alerts and outages',
-            'Implement security hardening and compliance frameworks'
+            'Managed identity governance and access controls for 750+ endpoints across 15+ client organizations',
+            'Monitored security posture of 20+ networks and servers, identifying vulnerabilities and implementing remediation controls',
+            'Deployed security patches and updates ensuring compliance with client security policies and regulatory requirements',
+            'Developed operational procedures and infrastructure reports for security monitoring'
         ]
     },
     {
         title: 'IT Technician',
         company: 'Skydance Interactive',
-        period: '2023 - 2024',
+        period: 'February 2023 - March 2024',
         points: [
-            'Provisioned user access using Okta, Active Directory, and Jenkins',
-            'Managed onboarding/offboarding procedures',
-            'Troubleshot infrastructure, VPN, and endpoint issues'
-        ]
-    },
-    {
-        title: 'IT Helpdesk Analyst',
-        company: 'James Perse',
-        period: '2022 - 2023',
-        points: [
-            'Managed and prioritized help desk tickets',
-            'Utilized Spiceworks and ManageEngine for troubleshooting'
+            'Configured VPN access controls and network security for cloud resources',
+            'Managed Active Directory for 30+ users including privilege assignment and access reviews',
+            'Identified and documented security vulnerabilities for remediation tracking'
         ]
     }
 ];
@@ -59,36 +95,39 @@ const experience = [
 const projects = [
     {
         num: '01',
-        name: 'Natols',
-        desc: 'Self-hosted AI financial analysis software providing intelligent insights, automated reporting, and real-time market analysis for enterprise financial operations.',
-        tech: ['AI/ML', 'Financial Analysis', 'Self-Hosted', 'Analytics']
+        name: 'Aquese',
+        desc: 'AI-driven compliance automation platform with automated policy enforcement, evidence collection, and continuous control validation. Architected with Java backend, TypeScript frontend, and deployed on AWS using Terraform and Docker.',
+        tech: ['Compliance', 'AI/ML', 'AWS', 'IaC']
     },
     {
         num: '02',
-        name: 'Pyzuh',
-        desc: 'Open-source Python library for Wazuh API communication, enabling automated security monitoring.',
-        tech: ['Python', 'Wazuh', 'API', 'Security']
+        name: 'Natols',
+        desc: 'Financial risk assessment platform with predictive analytics and anomaly detection. Built with Go backend, React frontend, PostgreSQL database, and integrated Ollama AI models for automated forecasting.',
+        tech: ['Risk Analysis', 'Go', 'AI/ML', 'Docker']
     },
     {
         num: '03',
-        name: 'Lilium Enterprise',
-        desc: 'Enterprise infrastructure for testing and deployment with on-prem servers and cloud backup.',
-        tech: ['VMware', 'Cloud', 'Backup', 'DR']
+        name: 'Security Automation',
+        desc: 'Ansible playbooks for automated security baseline configuration, patch management, and compliance validation across enterprise infrastructure.',
+        tech: ['Ansible', 'IaC', 'Automation', 'Security']
     },
     {
         num: '04',
-        name: 'Ansible Automation',
-        desc: 'Comprehensive playbooks for VM builds, patch management, and configuration standardization.',
-        tech: ['Ansible', 'IaC', 'Automation', 'DevOps']
+        name: 'Wazuh Integration',
+        desc: 'Python library (Pyzuh) for Wazuh SIEM API communication enabling automated security monitoring, alert correlation, and compliance reporting.',
+        tech: ['Python', 'SIEM', 'API', 'Monitoring']
     }
 ];
 
 const certs = [
-    { name: 'SSCP', org: '(ISC)²', full: 'Systems Security Certified Professional' },
-    { name: 'CySA+', org: 'CompTIA', full: 'Cybersecurity Analyst' },
-    { name: 'Security+', org: 'CompTIA', full: 'Security Certification' },
-    { name: 'Network+', org: 'CompTIA', full: 'Network Infrastructure' },
-    { name: 'Pentest+', org: 'CompTIA', full: 'Penetration Testing' }
+    { name: 'SSCP', org: '(ISC)²', full: 'Systems Security Certified Professional', initial: 'SP' },
+    { name: 'CySA+', org: 'CompTIA', full: 'Cybersecurity Analyst', initial: 'CA' },
+    { name: 'Security+', org: 'CompTIA', full: 'Security Certification', initial: 'S+' },
+    { name: 'Network+', org: 'CompTIA', full: 'Network Infrastructure', initial: 'N+' },
+    { name: 'Pentest+', org: 'CompTIA', full: 'Penetration Testing', initial: 'P+' },
+    { name: 'A+', org: 'CompTIA', full: 'Core IT Professional', initial: 'A+' },
+    { name: 'LPI', org: 'Linux Professional', full: 'Linux Administration', initial: 'LP' },
+    { name: 'ITIL', org: 'Axelos', full: 'IT Service Management', initial: 'IT' }
 ];
 
 // Loading Animation
@@ -157,17 +196,19 @@ function initMatrixEffect() {
 
 // Render Content
 function renderContent() {
-    // Tech Stack
-    const techStackContainer = document.getElementById('techStack');
-    if (techStackContainer) {
-        techStackContainer.innerHTML = techStack.map(tech => `
+    // Expertise
+    const expertiseContainer = document.getElementById('expertiseGrid');
+    if (expertiseContainer) {
+        expertiseContainer.innerHTML = expertise.map(exp => `
             <div class="group relative bg-[#0d1117] border-2 border-[#1f2937] rounded-2xl p-8 hover:border-[#00ff9d] transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-[0_8px_30px_rgba(0,255,157,0.15)]">
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00ff9d] to-[#00d4ff] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-t-2xl"></div>
-                <div class="text-5xl mb-6">${tech.icon}</div>
-                <h3 class="text-xl font-bold mb-3">${tech.name}</h3>
-                <p class="text-sm text-[#b8c5db] mb-6 leading-relaxed min-h-[40px]">${tech.desc}</p>
+                <div class="w-16 h-16 mb-6 flex items-center justify-center bg-[#00ff9d]/10 rounded-lg border border-[#00ff9d]/30">
+                    <span class="text-2xl font-black text-[#00ff9d]">${exp.letter}</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">${exp.name}</h3>
+                <p class="text-sm text-[#b8c5db] mb-6 leading-relaxed min-h-[60px]">${exp.desc}</p>
                 <div class="flex flex-wrap gap-2">
-                    ${tech.tags.map(tag => `<span class="px-3 py-1.5 text-xs font-semibold bg-[#00ff9d]/10 border border-[#00ff9d]/30 text-[#00ff9d] rounded-md">${tag}</span>`).join('')}
+                    ${exp.tags.map(tag => `<span class="px-3 py-1.5 text-xs font-semibold bg-[#00ff9d]/10 border border-[#00ff9d]/30 text-[#00ff9d] rounded-md">${tag}</span>`).join('')}
                 </div>
             </div>
         `).join('');
@@ -216,7 +257,7 @@ function renderContent() {
     if (certsContainer) {
         certsContainer.innerHTML = certs.map(cert => `
             <div class="group bg-[#0d1117] border-2 border-[#1f2937] rounded-2xl p-8 text-center hover:border-[#00ff9d] transition-all duration-300 hover:-translate-y-3 shadow-lg hover:shadow-[0_8px_30px_rgba(0,255,157,0.15)]">
-                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00ff9d] to-[#00d4ff] flex items-center justify-center text-3xl font-black text-[#050810] shadow-lg">${cert.name[0]}</div>
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00ff9d] to-[#00d4ff] flex items-center justify-center text-xl font-black text-[#050810] shadow-lg">${cert.initial}</div>
                 <h3 class="text-xl font-bold mb-2">${cert.name}</h3>
                 <p class="text-sm text-[#00ff9d] mb-3 font-semibold">${cert.org}</p>
                 <p class="text-xs text-[#b8c5db] leading-relaxed">${cert.full}</p>
