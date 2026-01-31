@@ -3,141 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Austin Silano | DevOps & Cybersecurity Engineer</title>
+    <title>Austin Silano | GRC & Security Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
     <style>
-        body { font-family: 'Space Grotesk', sans-serif; background: #050810; color: white; }
-        .font-mono { font-family: 'IBM Plex Mono', monospace; }
-        html { scroll-behavior: smooth; }
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #0a0e1a; }
-        ::-webkit-scrollbar-thumb { background: #00ff9d; border-radius: 5px; }
-        ::selection { background: #00ff9d; color: #050810; }
-        
-        @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-        }
-        
-        @keyframes glitch-2 {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(2px, -2px); }
-            40% { transform: translate(2px, 2px); }
-            60% { transform: translate(-2px, -2px); }
-            80% { transform: translate(-2px, 2px); }
-        }
-        
-        .glitch-title::before, .glitch-title::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-        }
-        
-        .glitch-title::before {
-            animation: glitch 2s infinite;
-            color: #00ff9d;
-            z-index: -1;
-        }
-        
-        .glitch-title::after {
-            animation: glitch-2 2s infinite;
-            color: #00d4ff;
-            z-index: -2;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in { animation: fadeIn 0.8s ease forwards; }
-        
-        #matrix-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0, 255, 157, 0.15);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-        
-        .hero-glow {
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        /* Animated Grid Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: 0;
-            pointer-events: none;
-            animation: gridMove 20s linear infinite;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        /* Scanline effect */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                rgba(0, 255, 157, 0.05) 50%,
-                transparent 100%
-            );
-            background-size: 100% 4px;
-            animation: scanline 8s linear infinite;
-            z-index: 0;
-            pointer-events: none;
-        }
-        
-        @keyframes scanline {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+        body, html {
+            background-color: #050810 !important;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
-<body>
+<body style="background-color: #050810;">
     <!-- Loading Screen -->
     <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div class="w-full max-w-2xl px-8">
@@ -148,10 +26,10 @@
                     <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                 </div>
                 <div class="p-6 font-mono text-sm">
-                    <div class="text-[#00ff9d] mb-2">$ Initializing secure connection...</div>
-                    <div class="text-[#00ff9d] mb-2">$ Authenticating credentials...</div>
-                    <div class="text-[#00ff9d] mb-2">$ Loading security protocols...</div>
-                    <div class="text-[#00ff9d]">$ Establishing encrypted tunnel...</div>
+                    <div class="text-[#00ff9d] mb-2">$ Initializing audit framework...</div>
+                    <div class="text-[#00ff9d] mb-2">$ Loading compliance controls...</div>
+                    <div class="text-[#00ff9d] mb-2">$ Validating security posture...</div>
+                    <div class="text-[#00ff9d]">$ Establishing risk assessment protocol...</div>
                 </div>
             </div>
             <div class="h-1.5 bg-black rounded-full overflow-hidden mb-4 border-2 border-[#00ff9d]/30">
@@ -167,7 +45,7 @@
     <canvas id="matrix-canvas"></canvas>
 
     <!-- Main Content -->
-    <div id="mainContent" style="display: none; position: relative; z-index: 1;">
+    <div id="mainContent" style="display: none; position: relative; z-index: 1; background-color: transparent;">
         <!-- Navigation -->
         <nav class="fixed top-0 left-0 right-0 z-50 bg-[#050810]/98 backdrop-blur-xl border-b-2 border-[#1f2937]">
             <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
@@ -179,7 +57,7 @@
                 <div class="hidden md:flex gap-10 text-sm font-semibold tracking-wider">
                     <a href="#home" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">HOME</a>
                     <a href="#about" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">ABOUT</a>
-                    <a href="#stack" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">STACK</a>
+                    <a href="#expertise" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">EXPERTISE</a>
                     <a href="#experience" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">EXPERIENCE</a>
                     <a href="#projects" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">PROJECTS</a>
                     <a href="#certifications" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors">CERTIFICATIONS</a>
@@ -189,14 +67,14 @@
         </nav>
 
         <!-- Hero -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center px-8 pt-20">
+        <section id="home" class="relative min-h-screen flex items-center justify-center px-8 pt-20" style="background-color: transparent;">
             <div class="absolute inset-0 bg-gradient-radial from-[#00ff9d]/10 via-transparent to-transparent opacity-30 hero-glow"></div>
             <div class="relative z-10 text-center max-w-4xl fade-in">
                 <h1 class="text-7xl md:text-8xl font-black mb-6 tracking-wider relative">
                     <span class="relative inline-block glitch-title" data-text="AUSTIN SILANO">AUSTIN SILANO</span>
                 </h1>
                 <p class="font-mono text-xl text-[#b8c5db] mb-12">
-                    DevOps Engineer | Cybersecurity Specialist | Infrastructure Architect
+                    GRC Analyst | Security Compliance | Risk Assessment
                 </p>
                 <div class="flex justify-center gap-16 mb-12 flex-wrap">
                     <div class="text-center">
@@ -204,11 +82,11 @@
                         <div class="text-sm text-[#b8c5db] tracking-wider">YEARS EXPERIENCE</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-5xl font-black text-[#00ff9d] mb-2" style="text-shadow: 0 0 20px rgba(0,255,157,0.5)">15+</div>
-                        <div class="text-sm text-[#b8c5db] tracking-wider">DEPLOYMENTS</div>
+                        <div class="text-5xl font-black text-[#00ff9d] mb-2" style="text-shadow: 0 0 20px rgba(0,255,157,0.5)">50+</div>
+                        <div class="text-sm text-[#b8c5db] tracking-wider">CONTROLS AUDITED</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-5xl font-black text-[#00ff9d] mb-2" style="text-shadow: 0 0 20px rgba(0,255,157,0.5)">10</div>
+                        <div class="text-5xl font-black text-[#00ff9d] mb-2" style="text-shadow: 0 0 20px rgba(0,255,157,0.5)">8</div>
                         <div class="text-sm text-[#b8c5db] tracking-wider">CERTIFICATIONS</div>
                     </div>
                 </div>
@@ -217,8 +95,8 @@
                         <span class="relative z-10 group-hover:text-[#050810] transition-colors">INITIATE CONNECTION</span>
                         <div class="absolute inset-0 bg-[#00ff9d] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     </a>
-                    <a href="#stack" class="relative px-10 py-4 text-sm font-bold tracking-widest border-2 border-[#00d4ff] text-[#00d4ff] overflow-hidden group">
-                        <span class="relative z-10 group-hover:text-[#050810] transition-colors">VIEW TECH STACK</span>
+                    <a href="#expertise" class="relative px-10 py-4 text-sm font-bold tracking-widest border-2 border-[#00d4ff] text-[#00d4ff] overflow-hidden group">
+                        <span class="relative z-10 group-hover:text-[#050810] transition-colors">VIEW EXPERTISE</span>
                         <div class="absolute inset-0 bg-[#00d4ff] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     </a>
                 </div>
@@ -226,7 +104,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="relative py-32 px-8">
+        <section id="about" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">01.</span>
@@ -236,35 +114,44 @@
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="space-y-6 text-[#b8c5db] leading-relaxed">
                         <p class="text-white text-lg font-medium">
-                            I am a passionate SysAdmin, DevOps engineer ,and cybersecurity specialist who bridges the gap between 
-                            development, operations, and security. My expertise lies in building secure, scalable infrastructure 
-                            and implementing enterprise-grade security solutions.
+                            I am a GRC and security analyst specializing in compliance frameworks, risk assessment, 
+                            and security auditing. My expertise bridges technical security controls with business risk 
+                            management and regulatory compliance.
                         </p>
                         <p>
-                            My background spans infrastructure as code, container orchestration, zero-trust security architectures, 
-                            and advanced threat detection. I specialize in automating security compliance, implementing SIEM solutions, 
-                            and architecting secure cloud environments.
+                            My experience includes leading SOC2 Type II audits, conducting infrastructure risk assessments 
+                            aligned with NIST Cybersecurity Framework, and implementing security controls across cloud and 
+                            on-premise environments. I translate complex security requirements into actionable controls 
+                            that protect organizations while enabling business objectives.
                         </p>
                         <p>
-                            Every day, I expand my knowledge in emerging technologies, from AI-driven security automation to 
-                            advanced network segmentation, ensuring I can deploy cutting-edge solutions that protect enterprises 
-                            while maintaining operational excellence.
+                            I focus on continuous improvement of security posture through threat intelligence, 
+                            vulnerability management, and proactive risk mitigation. My approach combines technical 
+                            depth with strategic risk management to deliver comprehensive security solutions.
                         </p>
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="flex items-center gap-3 p-4 bg-[#0d1117] border-2 border-[#1f2937] rounded-xl card-hover">
-                                <span class="text-3xl">🛡️</span>
-                                <span class="text-sm font-semibold text-white">Zero Trust Architecture</span>
+                                <div class="w-10 h-10 flex items-center justify-center bg-[#00ff9d]/10 rounded-lg">
+                                    <span class="text-[#00ff9d] font-black text-lg">A</span>
+                                </div>
+                                <span class="text-sm font-semibold text-white">Audit & Compliance</span>
                             </div>
                             <div class="flex items-center gap-3 p-4 bg-[#0d1117] border-2 border-[#1f2937] rounded-xl card-hover">
-                                <span class="text-3xl">⚙️</span>
-                                <span class="text-sm font-semibold text-white">Infrastructure as Code</span>
+                                <div class="w-10 h-10 flex items-center justify-center bg-[#00ff9d]/10 rounded-lg">
+                                    <span class="text-[#00ff9d] font-black text-lg">R</span>
+                                </div>
+                                <span class="text-sm font-semibold text-white">Risk Assessment</span>
                             </div>
                             <div class="flex items-center gap-3 p-4 bg-[#0d1117] border-2 border-[#1f2937] rounded-xl card-hover">
-                                <span class="text-3xl">🔒</span>
-                                <span class="text-sm font-semibold text-white">Security Automation</span>
+                                <div class="w-10 h-10 flex items-center justify-center bg-[#00ff9d]/10 rounded-lg">
+                                    <span class="text-[#00ff9d] font-black text-lg">G</span>
+                                </div>
+                                <span class="text-sm font-semibold text-white">Governance</span>
                             </div>
                             <div class="flex items-center gap-3 p-4 bg-[#0d1117] border-2 border-[#1f2937] rounded-xl card-hover">
-                                <span class="text-3xl">📊</span>
+                                <div class="w-10 h-10 flex items-center justify-center bg-[#00ff9d]/10 rounded-lg">
+                                    <span class="text-[#00ff9d] font-black text-lg">T</span>
+                                </div>
                                 <span class="text-sm font-semibold text-white">Threat Intelligence</span>
                             </div>
                         </div>
@@ -276,27 +163,32 @@
                             <div class="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-[#00d4ff] rounded-bl-lg"></div>
                             <div class="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-[#00d4ff] rounded-br-lg"></div>
                             <div class="absolute inset-0 bg-gradient-to-br from-[#00ff9d]/20 to-[#00d4ff]/20 mix-blend-overlay"></div>
-                            <div class="w-full h-full flex items-center justify-center text-9xl">👨‍💻</div>
+                            <div class="w-full h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-8xl font-black text-[#00ff9d] mb-4">GRC</div>
+                                    <div class="text-xl text-[#b8c5db] font-mono">ANALYST</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tech Stack Section -->
-        <section id="stack" class="relative py-32 px-8 bg-[#0a0e1a]">
+        <!-- Expertise Section -->
+        <section id="expertise" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">02.</span>
-                    <h2 class="text-4xl font-black tracking-wider">TECH STACK</h2>
+                    <h2 class="text-4xl font-black tracking-wider">EXPERTISE</h2>
                     <div class="flex-1 h-0.5 bg-gradient-to-r from-[#1f2937] to-transparent"></div>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" id="techStack"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="expertiseGrid"></div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="relative py-32 px-8">
+        <section id="experience" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">03.</span>
@@ -310,7 +202,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="relative py-32 px-8 bg-[#0a0e1a]">
+        <section id="projects" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">04.</span>
@@ -322,19 +214,19 @@
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="relative py-32 px-8">
+        <section id="certifications" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">05.</span>
                     <h2 class="text-4xl font-black tracking-wider">CERTIFICATIONS</h2>
                     <div class="flex-1 h-0.5 bg-gradient-to-r from-[#1f2937] to-transparent"></div>
                 </div>
-                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6" id="certsContainer"></div>
+                <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6" id="certsContainer"></div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="relative py-32 px-8 bg-[#0a0e1a]">
+        <section id="contact" class="relative py-32 px-8" style="background-color: transparent;">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-center gap-6 mb-20">
                     <span class="font-mono text-2xl text-[#00ff9d]">06.</span>
@@ -342,43 +234,48 @@
                     <div class="flex-1 h-0.5 bg-gradient-to-r from-[#1f2937] to-transparent"></div>
                 </div>
                 <div class="text-center mb-16">
-                    <h3 class="text-4xl font-bold mb-6">Let's Build Something Secure</h3>
+                    <h3 class="text-4xl font-bold mb-6">Let's Strengthen Your Security Posture</h3>
                     <p class="text-lg text-[#b8c5db] leading-relaxed max-w-2xl mx-auto">
-                        I'm always interested in discussing new opportunities, innovative projects, 
-                        or potential collaborations in DevOps and Cybersecurity. Whether you need 
-                        infrastructure expertise or security solutions, let's connect.
+                        I'm always interested in discussing compliance initiatives, risk management strategies, 
+                        or security consulting opportunities. Whether you need audit support or GRC expertise, let's connect.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-[#0d1117] border-2 border-[#1f2937] rounded-2xl p-8 text-center card-hover">
-                        <div class="text-5xl mb-5">📧</div>
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#00ff9d]/10 rounded-full">
+                            <span class="text-3xl font-black text-[#00ff9d]">@</span>
+                        </div>
                         <h4 class="text-sm text-[#b8c5db] mb-4 tracking-wider uppercase font-semibold">Email</h4>
-                        <a href="mailto:austin@aquese" class="text-[#00ff9d] font-semibold hover:text-[#00d4ff] transition-colors text-base">
+                        <a href="mailto:austin@aquese.com" class="text-[#00ff9d] font-semibold hover:text-[#00d4ff] transition-colors text-base">
                             austin@aquese.com
                         </a>
                     </div>
                     <div class="bg-[#0d1117] border-2 border-[#1f2937] rounded-2xl p-8 text-center card-hover">
-                        <div class="text-5xl mb-5">📱</div>
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#00ff9d]/10 rounded-full">
+                            <span class="text-3xl font-black text-[#00ff9d]">#</span>
+                        </div>
                         <h4 class="text-sm text-[#b8c5db] mb-4 tracking-wider uppercase font-semibold">Phone</h4>
                         <a href="tel:9494691316" class="text-[#00ff9d] font-semibold hover:text-[#00d4ff] transition-colors text-base">
                             (949) 469-1316
                         </a>
                     </div>
                     <div class="bg-[#0d1117] border-2 border-[#1f2937] rounded-2xl p-8 text-center card-hover">
-                        <div class="text-5xl mb-5">📍</div>
+                        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#00ff9d]/10 rounded-full">
+                            <span class="text-3xl font-black text-[#00ff9d]">◉</span>
+                        </div>
                         <h4 class="text-sm text-[#b8c5db] mb-4 tracking-wider uppercase font-semibold">Location</h4>
-                        <p class="font-semibold text-base">Los Angeles, CA, US</p>
+                        <p class="font-semibold text-base">Santa Monica, CA</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="relative py-10 px-8 border-t border-[#1f2937]">
+        <footer class="relative py-10 px-8 border-t border-[#1f2937]" style="background-color: transparent;">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-center md:text-left">
                     <p class="text-[#b8c5db] text-sm mb-1">© 2025 Austin Silano. All rights reserved.</p>
-                    <p class="text-[#8b9dc3] text-xs italic">Securing the digital frontier, one deployment at a time.</p>
+                    <p class="text-[#8b9dc3] text-xs italic">Building secure, compliant infrastructure.</p>
                 </div>
                 <div class="flex gap-8">
                     <a href="https://github.com/austinsilano" class="text-[#b8c5db] hover:text-[#00ff9d] transition-colors text-sm">GitHub</a>
